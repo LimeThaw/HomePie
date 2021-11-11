@@ -8,8 +8,8 @@
 
       <div class="row">
         <div class="col">
-          Currently {{clicks}} clicks.<br/>
-          <button>Decrease</button>
-          <button>Increase</button>
+          Currently <span id="currentClicks">{{clicks}}</span> clicks.<br/>
+          <button onclick="decreaseClicks()">Decrease</button>
+          <button onclick="increaseClicks()">Increase</button>
         </div>
       </div>

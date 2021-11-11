@@ -4,5 +4,6 @@ RUN apk add --no-cache --update make
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
-WORKDIR .
+WORKDIR /work
+COPY . /work
 CMD ["gunicorn", "server:app", "--bind", "0.0.0.0:5000"]
