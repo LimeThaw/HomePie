@@ -8,3 +8,14 @@ services:
       - "5000:5000"
   redis:
     image: "redis:alpine"
+
+    volumes:
+      - redis_data:/data
+
+volumes:
+  redis_data:
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: './redis_data'
