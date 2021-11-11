@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+@cs-white: rgba(225,255,207,1);
+@cs-black: rgba( 22, 49,  7,1);
+@cs-gray: average(@cs-white, @cs-black);
+@cs-background: rgba(146,233, 94,1);
+@cs-highlight-light: rgba( 96,230, 18,1);
+@cs-highlight-dark: rgba( 56,140,  6,1);
+
+body {
+	color:			@cs-black;
+	font-family: 'Roboto Slab', serif;
+	font-weight:	500;
+}
+
+.navbar {
+	background-color:	@cs-background;
+	height:				5rem;
+	margin-bottom:		5rem;
+
+	.navbar-brand {
+		font-size:		3rem;
+		font-weight:	800;
+	}
+}
+
+.mainContainer {
+	max-width:			50rem;
+}
