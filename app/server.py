@@ -67,8 +67,10 @@ def get_timeseries_names():
 	re = util.sqlite_execute(sqlite_conn, "SELECT name FROM sqlite_master WHERE type='table';")
 	return {"result": re}
 
-@app.route("/timeseries/add/<name>")
-def add_timeseries(name):
+@app.route("/timeseries/add", methods=["POST"])
+def add_timeseries():
+	name = request.form.get('name')
+
 	sqlite_conn = util.sqlite_connect(sqlite_path)
 	re = util.sqlite_execute(sqlite_conn, "SELECT name FROM sqlite_master WHERE type='table';")
 	if name in [x[0] for x in re]:

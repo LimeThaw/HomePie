@@ -24,7 +24,13 @@ function addTimeseries() {
     if(name==null || name.length<1) {
         alert("Please insert a better name")
     } else {
-        $.ajax({url: "timeseries/add/{0}".format(name), success: function(result){
+        $.ajax({
+            type: 'POST',
+            url: '/timeseries/add',
+            data: { 
+                "name": name
+            },
+            success: function(result){
             if(result["code"] == 0) {
                 console.log(result["result"])
                 updateTimeseries()
