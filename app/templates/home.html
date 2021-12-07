@@ -29,14 +29,24 @@
 		</script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.12.2/less.js" ></script>
 
+		<!-- chart.js -->
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.2/dist/chart.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/luxon@^2"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@^1"></script>
+
 		<!-- Cusom JS -->
 		<script src="static/test.js"></script>
+		<script src="static/timeseries.js"></script>
 
 	</head>
 	<body>
     <div class="navbar">
       HomePie
     </div>
+
+		<div class="container">
+			{%include "timeseries.html" %}
+		</div>
 
 		<div class="container">
 			{%include "test.html" %}

@@ -7,3 +7,4 @@ RUN pip install -r requirements.txt
 WORKDIR /work
 COPY . /work
 CMD ["gunicorn", "server:app", "--bind", "0.0.0.0:5000"]
+# CMD ["python", "server.py"]

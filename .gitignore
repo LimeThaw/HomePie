@@ -40,4 +40,4 @@ env.bak/
 venv.bak/
 
 # Custom
-*.rdb
+*/debug.db
